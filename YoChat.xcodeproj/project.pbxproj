@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F424CC6C30009ECA9A /* AppDelegate.swift */; };
+		F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F624CC6C30009ECA9A /* SceneDelegate.swift */; };
+		F36899F924CC6C30009ECA9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F824CC6C30009ECA9A /* ViewController.swift */; };
+		F36899FC24CC6C30009ECA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36899FA24CC6C30009ECA9A /* Main.storyboard */; };
+		F36899FE24CC6C35009ECA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36899FD24CC6C35009ECA9A /* Assets.xcassets */; };
+		F3689A0124CC6C35009ECA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36899FF24CC6C35009ECA9A /* LaunchScreen.storyboard */; };
+		F3689A0C24CC6C35009ECA9A /* YoChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A0B24CC6C35009ECA9A /* YoChatTests.swift */; };
+		F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A1C24CC70AE009ECA9A /* ChatItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3689A0824CC6C35009ECA9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F36899E924CC6C30009ECA9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F36899F024CC6C30009ECA9A;
+			remoteInfo = YoChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F36899F124CC6C30009ECA9A /* YoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36899F424CC6C30009ECA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F36899F624CC6C30009ECA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F36899F824CC6C30009ECA9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F36899FB24CC6C30009ECA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F36899FD24CC6C35009ECA9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3689A0024CC6C35009ECA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3689A0224CC6C35009ECA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3689A0724CC6C35009ECA9A /* YoChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3689A0B24CC6C35009ECA9A /* YoChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoChatTests.swift; sourceTree = "<group>"; };
+		F3689A0D24CC6C35009ECA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3689A1C24CC70AE009ECA9A /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F36899EE24CC6C30009ECA9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3689A0424CC6C35009ECA9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F36899E824CC6C30009ECA9A = {
+			isa = PBXGroup;
+			children = (
+				F36899F324CC6C30009ECA9A /* YoChat */,
+				F3689A0A24CC6C35009ECA9A /* YoChatTests */,
+				F36899F224CC6C30009ECA9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F36899F224CC6C30009ECA9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F36899F124CC6C30009ECA9A /* YoChat.app */,
+				F3689A0724CC6C35009ECA9A /* YoChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F36899F324CC6C30009ECA9A /* YoChat */ = {
+			isa = PBXGroup;
+			children = (
+				F3689A1924CC6D9C009ECA9A /* Views */,
+				F3689A1724CC6D3B009ECA9A /* Models */,
+				F3689A1624CC6D2C009ECA9A /* ViewModels */,
+				F3689A1824CC6D4C009ECA9A /* ViewControllers */,
+				F3689A1A24CC6EE8009ECA9A /* Other */,
+			);
+			path = YoChat;
+			sourceTree = "<group>";
+		};
+		F3689A0A24CC6C35009ECA9A /* YoChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3689A0B24CC6C35009ECA9A /* YoChatTests.swift */,
+				F3689A0D24CC6C35009ECA9A /* Info.plist */,
+			);
+			path = YoChatTests;
+			sourceTree = "<group>";
+		};
+		F3689A1624CC6D2C009ECA9A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F3689A1724CC6D3B009ECA9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3689A1C24CC70AE009ECA9A /* ChatItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3689A1824CC6D4C009ECA9A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F36899F824CC6C30009ECA9A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3689A1924CC6D9C009ECA9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3689A1B24CC6FE6009ECA9A /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3689A1A24CC6EE8009ECA9A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F3689A0224CC6C35009ECA9A /* Info.plist */,
+				F36899FD24CC6C35009ECA9A /* Assets.xcassets */,
+				F36899F624CC6C30009ECA9A /* SceneDelegate.swift */,
+				F36899F424CC6C30009ECA9A /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F3689A1B24CC6FE6009ECA9A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F36899FF24CC6C35009ECA9A /* LaunchScreen.storyboard */,
+				F36899FA24CC6C30009ECA9A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F36899F024CC6C30009ECA9A /* YoChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3689A1024CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChat" */;
+			buildPhases = (
+				F36899ED24CC6C30009ECA9A /* Sources */,
+				F36899EE24CC6C30009ECA9A /* Frameworks */,
+				F36899EF24CC6C30009ECA9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YoChat;
+			productName = YoChat;
+			productReference = F36899F124CC6C30009ECA9A /* YoChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3689A0624CC6C35009ECA9A /* YoChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3689A1324CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChatTests" */;
+			buildPhases = (
+				F3689A0324CC6C35009ECA9A /* Sources */,
+				F3689A0424CC6C35009ECA9A /* Frameworks */,
+				F3689A0524CC6C35009ECA9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3689A0924CC6C35009ECA9A /* PBXTargetDependency */,
+			);
+			name = YoChatTests;
+			productName = YoChatTests;
+			productReference = F3689A0724CC6C35009ECA9A /* YoChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F36899E924CC6C30009ECA9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Xoliswa;
+				TargetAttributes = {
+					F36899F024CC6C30009ECA9A = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					F3689A0624CC6C35009ECA9A = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = F36899F024CC6C30009ECA9A;
+					};
+				};
+			};
+			buildConfigurationList = F36899EC24CC6C30009ECA9A /* Build configuration list for PBXProject "YoChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F36899E824CC6C30009ECA9A;
+			productRefGroup = F36899F224CC6C30009ECA9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F36899F024CC6C30009ECA9A /* YoChat */,
+				F3689A0624CC6C35009ECA9A /* YoChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F36899EF24CC6C30009ECA9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3689A0124CC6C35009ECA9A /* LaunchScreen.storyboard in Resources */,
+				F36899FE24CC6C35009ECA9A /* Assets.xcassets in Resources */,
+				F36899FC24CC6C30009ECA9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3689A0524CC6C35009ECA9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F36899ED24CC6C30009ECA9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */,
+				F36899F924CC6C30009ECA9A /* ViewController.swift in Sources */,
+				F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */,
+				F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3689A0324CC6C35009ECA9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3689A0C24CC6C35009ECA9A /* YoChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3689A0924CC6C35009ECA9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F36899F024CC6C30009ECA9A /* YoChat */;
+			targetProxy = F3689A0824CC6C35009ECA9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F36899FA24CC6C30009ECA9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F36899FB24CC6C30009ECA9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F36899FF24CC6C35009ECA9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3689A0024CC6C35009ECA9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3689A0E24CC6C35009ECA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3689A0F24CC6C35009ECA9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3689A1124CC6C35009ECA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48DF9Q34LN;
+				INFOPLIST_FILE = YoChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xoliswa.YoChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3689A1224CC6C35009ECA9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48DF9Q34LN;
+				INFOPLIST_FILE = YoChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xoliswa.YoChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3689A1424CC6C35009ECA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48DF9Q34LN;
+				INFOPLIST_FILE = YoChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xoliswa.YoChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoChat.app/YoChat";
+			};
+			name = Debug;
+		};
+		F3689A1524CC6C35009ECA9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48DF9Q34LN;
+				INFOPLIST_FILE = YoChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xoliswa.YoChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoChat.app/YoChat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F36899EC24CC6C30009ECA9A /* Build configuration list for PBXProject "YoChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3689A0E24CC6C35009ECA9A /* Debug */,
+				F3689A0F24CC6C35009ECA9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3689A1024CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3689A1124CC6C35009ECA9A /* Debug */,
+				F3689A1224CC6C35009ECA9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3689A1324CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3689A1424CC6C35009ECA9A /* Debug */,
+				F3689A1524CC6C35009ECA9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F36899E924CC6C30009ECA9A /* Project object */;
+}
