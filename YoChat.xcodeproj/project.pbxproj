@@ -15,6 +15,8 @@
 		F3689A0124CC6C35009ECA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36899FF24CC6C35009ECA9A /* LaunchScreen.storyboard */; };
 		F3689A0C24CC6C35009ECA9A /* YoChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A0B24CC6C35009ECA9A /* YoChatTests.swift */; };
 		F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A1C24CC70AE009ECA9A /* ChatItem.swift */; };
+		F3689A1F24CC7AF8009ECA9A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A1E24CC7AF8009ECA9A /* Chat.swift */; };
+		F3689A2324CC898A009ECA9A /* ChatContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A2224CC898A009ECA9A /* ChatContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		F3689A0B24CC6C35009ECA9A /* YoChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoChatTests.swift; sourceTree = "<group>"; };
 		F3689A0D24CC6C35009ECA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3689A1C24CC70AE009ECA9A /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		F3689A1E24CC7AF8009ECA9A /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		F3689A2224CC898A009ECA9A /* ChatContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				F3689A1C24CC70AE009ECA9A /* ChatItem.swift */,
+				F3689A1E24CC7AF8009ECA9A /* Chat.swift */,
+				F3689A2224CC898A009ECA9A /* ChatContact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3689A2324CC898A009ECA9A /* ChatContact.swift in Sources */,
 				F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */,
 				F36899F924CC6C30009ECA9A /* ViewController.swift in Sources */,
 				F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */,
+				F3689A1F24CC7AF8009ECA9A /* Chat.swift in Sources */,
 				F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48DF9Q34LN;
-				INFOPLIST_FILE = YoChat/Info.plist;
+				INFOPLIST_FILE = YoChat/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48DF9Q34LN;
-				INFOPLIST_FILE = YoChat/Info.plist;
+				INFOPLIST_FILE = YoChat/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
