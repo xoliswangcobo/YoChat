@@ -26,7 +26,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let chat = self.chatsViewModel?.chats[indexPath.row]
         
-        chatCell.date.text = "\(chat?.chatItems.last?.date)"
+        chatCell.date.text = "\(chat?.chatItems.last?.date ?? Date())"
         chatCell.firstLastName.text = chat?.contact.alias
         
         return chatCell

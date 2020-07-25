@@ -20,14 +20,14 @@ extension UIApplication {
                                    duration: TimeInterval = 0.5,
                                    completion: (() -> Void)? = nil) {
         guard animated else {
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+             UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController = viewController
             return
         }
         
-        UIView.transition(with: UIApplication.shared.keyWindow!, duration: duration, options: options, animations: {
+        UIView.transition(with:  UIApplication.shared.windows.first { $0.isKeyWindow }!, duration: duration, options: options, animations: {
             let oldState = UIView.areAnimationsEnabled
             UIView.setAnimationsEnabled(false)
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+             UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController = viewController
             UIView.setAnimationsEnabled(oldState)
         }) { _ in
             completion?()
