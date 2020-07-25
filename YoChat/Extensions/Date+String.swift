@@ -12,7 +12,7 @@ extension Date {
     
     func dateString() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = ""
+        dateFormatter.dateFormat = Constants.dateFormat
         dateFormatter.timeStyle = .short
         dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: self)

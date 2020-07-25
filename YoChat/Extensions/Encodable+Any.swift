@@ -14,7 +14,7 @@ extension Encodable {
             let encoder = JSONEncoder()
             encoder.dateEncodingStrategy = .custom({ date, encoder in
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = ServiceEnvironment.commonDateFormat
+                dateFormatter.dateFormat = Constants.dateFormat
                 var container = encoder.singleValueContainer()
                 try container.encode(dateFormatter.string(from: date))
             })

@@ -57,7 +57,7 @@ extension Decodable {
                     let container = try decoder.singleValueContainer()
                     let dateString = try container.decode(String.self)
                     let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = ""
+                    dateFormatter.dateFormat = Constants.dateFormat
                     return dateFormatter.date(from: dateString) ?? Date()
                 })
                 let model = try decoder.decode(T.self, from:theJSONData)
