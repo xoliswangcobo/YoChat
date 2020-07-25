@@ -5,7 +5,7 @@ target 'YoChat' do
 
   # Pods for YoChat
   pod 'Bond'
-  pod 'Swinject'
+  pod 'Swinject', '2.6.0'
   pod 'SwinjectStoryboard'
 
   target 'YoChatTests' do

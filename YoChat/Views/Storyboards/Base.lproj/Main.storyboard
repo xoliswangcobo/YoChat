@@ -54,12 +54,12 @@
         <!--Chats-->
         <scene sceneID="UnJ-bx-GPu">
             <objects>
-                <viewController id="Do3-IP-2aC" sceneMemberID="viewController">
+                <viewController id="Do3-IP-2aC" customClass="ChatsViewController" customModule="YoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEJ-Sw-d9V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NLZ-6m-8SQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NLZ-6m-8SQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -123,7 +123,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="editingAccessoryView" destination="l9a-4J-ddx" id="H4T-Gm-ABA"/>
+                                            <outlet property="date" destination="l9a-4J-ddx" id="Apx-wb-acn"/>
                                             <outlet property="firstLastName" destination="FN4-0X-mFt" id="LcT-sE-rC1"/>
                                             <outlet property="message" destination="Lfc-oE-0Xt" id="ulM-iE-HV8"/>
                                             <outlet property="profileImage" destination="4sW-2w-uut" id="VYv-dy-6CN"/>
@@ -143,6 +143,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Chats" image="message.fill" catalog="system" id="xZc-hU-5Na"/>
                     <connections>
+                        <outlet property="tableView" destination="NLZ-6m-8SQ" id="siX-5d-9vh"/>
                         <segue destination="wBC-pc-8WQ" kind="show" identifier="toChatViewController" id="ipT-Qn-Vwc"/>
                     </connections>
                 </viewController>
@@ -158,7 +159,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-Mb-bgy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-Mb-bgy">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -204,6 +205,10 @@
                                                 <constraint firstItem="zJ1-T8-zme" firstAttribute="top" secondItem="rfq-O9-6LR" secondAttribute="top" constant="8" id="vNP-mK-ebm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="M39-jV-y80" id="Day-6G-LQ6"/>
+                                            <outlet property="message" destination="65n-ba-484" id="Qgc-BQ-3l1"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatImage" rowHeight="476" id="RvE-qu-IDY" customClass="ChatItemImageTableViewCell" customModule="YoChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="98" width="414" height="476"/>
@@ -257,6 +262,11 @@
                                                 <constraint firstItem="hxE-2N-Qe5" firstAttribute="top" secondItem="Jpv-JP-BHY" secondAttribute="top" constant="8" id="uSK-gw-lUu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="yqS-WH-qvM" id="Rvg-iq-CWJ"/>
+                                            <outlet property="message" destination="pwc-64-5rF" id="USy-lX-2o2"/>
+                                            <outlet property="messageImage" destination="KWr-gb-bSm" id="NWv-Ik-biJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -315,7 +325,6 @@
         <!--Profile-->
         <scene sceneID="h3b-3B-mQy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDU-Wz-HIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="TCS-Aa-voP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wmV-PH-fSK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -325,6 +334,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="yQb-i9-k5d"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDU-Wz-HIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728" y="765"/>
         </scene>
@@ -336,10 +346,10 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="dark_1">
-            <color red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.1289999932050705" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_3">
-            <color red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="0.18000000715255737" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
