@@ -16,14 +16,12 @@ class ChatsViewModel {
     func getChats() {
         var someChats:[Chat] = []
         
-        for index in 0..<10 {
-            do {
-                if let chat:Chat = try Chat.decode(["id" : "101_\(index)", "chatItems" : [], "contact" : [ "firstname" : "Xoliswa", "lastname" : "Ngcobo", "email" : "xoliswa@ngcobo.com", "alias" : "eXo"]]) {
-                    someChats.append(chat)
-                }
-            } catch (let e) {
-                print(e)
+        do {
+            if let chat:Chat = try Chat.decode(["id" : "101_\(1)", "chatItems" : [], "contact" : [ "firstname" : "Xoliswa", "lastname" : "Ngcobo", "email" : "xoliswa@ngcobo.com", "alias" : "eXo"]]) {
+                someChats.append(chat)
             }
+        } catch (let e) {
+            print(e)
         }
         
         self.chats.send(someChats)

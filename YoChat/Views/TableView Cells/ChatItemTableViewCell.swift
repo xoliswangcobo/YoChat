@@ -19,9 +19,11 @@ class ChatItemTableViewCell: UITableViewCell {
         if isIncoming == false {
             self.leading.constant = 32
             self.trailing.constant = 16
+            self.date.textAlignment = .right
         } else {
             self.trailing.constant = 32
             self.leading.constant = 16
+            self.date.textAlignment = .left
         }
     }
 

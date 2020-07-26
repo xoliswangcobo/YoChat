@@ -75,6 +75,17 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 chat.chatItems = items
                 self.tableView.reloadData()
             }.dispose(in: viewController.reactive.bag)
+            
+            Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
+                do {
+                    let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : "Text", "isIncoming" : true, "data" : "Helloo" ])
+                if let chatItem = item {
+                    viewController.chatItems.value.append(chatItem)
+                }
+                } catch {
+                    
+                }
+            }
         }
     }
 }

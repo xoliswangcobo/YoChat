@@ -180,7 +180,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M39-jV-y80">
-                                                            <rect key="frame" x="348.5" y="40.5" width="21.5" height="19.5"/>
+                                                            <rect key="frame" x="12" y="40.5" width="358" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -188,13 +188,13 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="M39-jV-y80" firstAttribute="leading" secondItem="65n-ba-484" secondAttribute="leading" id="2H0-Rd-27P"/>
                                                         <constraint firstItem="65n-ba-484" firstAttribute="leading" secondItem="zJ1-T8-zme" secondAttribute="leading" constant="12" id="TVk-yR-SSz"/>
                                                         <constraint firstAttribute="trailing" secondItem="65n-ba-484" secondAttribute="trailing" constant="12" id="X80-WG-K5E"/>
                                                         <constraint firstAttribute="trailing" secondItem="M39-jV-y80" secondAttribute="trailing" constant="12" id="dsD-Qc-9du"/>
                                                         <constraint firstAttribute="bottom" secondItem="M39-jV-y80" secondAttribute="bottom" constant="2" id="imW-IO-Shj"/>
                                                         <constraint firstItem="M39-jV-y80" firstAttribute="top" secondItem="65n-ba-484" secondAttribute="bottom" constant="4.5" id="qYX-Qp-HRi"/>
                                                         <constraint firstItem="65n-ba-484" firstAttribute="top" secondItem="zJ1-T8-zme" secondAttribute="top" constant="12" id="wTR-Vm-odS"/>
-                                                        <constraint firstItem="M39-jV-y80" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zJ1-T8-zme" secondAttribute="leading" constant="20" symbolic="YES" id="wWX-4o-sCt"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -235,7 +235,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqS-WH-qvM">
-                                                            <rect key="frame" x="360.5" y="247.5" width="21.5" height="20.5"/>
+                                                            <rect key="frame" x="12" y="247.5" width="370" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -250,10 +250,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="yqS-WH-qvM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hxE-2N-Qe5" secondAttribute="leading" constant="20" symbolic="YES" id="8sk-X2-TUa"/>
                                                         <constraint firstItem="KWr-gb-bSm" firstAttribute="leading" secondItem="pwc-64-5rF" secondAttribute="leading" id="A1c-jh-e1q"/>
                                                         <constraint firstItem="pwc-64-5rF" firstAttribute="leading" secondItem="hxE-2N-Qe5" secondAttribute="leading" constant="12" id="Fzx-Ij-UJ6"/>
                                                         <constraint firstItem="KWr-gb-bSm" firstAttribute="trailing" secondItem="pwc-64-5rF" secondAttribute="trailing" id="GWy-aJ-8RQ"/>
+                                                        <constraint firstItem="yqS-WH-qvM" firstAttribute="leading" secondItem="pwc-64-5rF" secondAttribute="leading" id="Rt2-sV-Ijk"/>
                                                         <constraint firstAttribute="trailing" secondItem="yqS-WH-qvM" secondAttribute="trailing" constant="16" id="TKb-cm-Ctt"/>
                                                         <constraint firstAttribute="trailing" secondItem="pwc-64-5rF" secondAttribute="trailing" constant="12" id="VSe-cl-dFs"/>
                                                         <constraint firstItem="pwc-64-5rF" firstAttribute="top" secondItem="hxE-2N-Qe5" secondAttribute="top" constant="20" symbolic="YES" id="Vh1-iM-GVb"/>
