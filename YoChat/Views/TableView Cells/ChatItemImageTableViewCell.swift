@@ -17,6 +17,7 @@ class ChatItemImageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.message.text = "Photo"
+        self.messageImage.layer.cornerRadius = 3
     }
     
     func setIncoming(_ isIncoming:Bool) {

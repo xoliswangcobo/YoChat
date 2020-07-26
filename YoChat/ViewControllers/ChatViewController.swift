@@ -88,6 +88,7 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
         let _ = self.sendButton.reactive.tap.observeNext {
             self.sendData(type: .Text, data: self.textMessage.text)
             self.textMessage.text = ""
+            self.sendButton.isEnabled = false
         }.dispose(in: self.reactive.bag)
         
         let _ = self.textMessage.reactive.text.observeNext { [unowned self] (text) in
