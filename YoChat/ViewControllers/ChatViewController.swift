@@ -35,18 +35,26 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
                         self.imagePickerController.sourceType = .camera
                         self.present(self.imagePickerController, animated: true, completion: nil)
                     }  else {
-                        print("Camera is Not Available")
+                        MessageView.showMessage(title: "Send Photo", message: "Camera is not Available", viewController: self, actions: [("Settings", {
+                            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+                        }), ("Cancel", {
+                            
+                        })])
                     }
                 }
             }
         })
         
         self.actionsheet.addAction(UIAlertAction(title: "Photo Library", style: .default) { action in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 self.imagePickerController.sourceType = .photoLibrary
                 self.present(self.imagePickerController, animated: true, completion: nil)
             } else {
-                print("PhotoLibrary is Not Available")
+                MessageView.showMessage(title: "Send Photo", message: "Photo Library is Not Available", viewController: self, actions: [("Settings", {
+                    UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+                }), ("Cancel", {
+                    
+                })])
             }
         })
             
@@ -56,7 +64,7 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
     }
     
     @objc func selectImage() {
-        self.present(self.actionsheet,animated: true, completion: nil)
+        self.present(self.actionsheet,animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

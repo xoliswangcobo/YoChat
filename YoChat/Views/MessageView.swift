@@ -10,9 +10,9 @@ import UIKit
 
 class MessageView {
     
-    class func showMessage(title:String, message:String, viewController:UIViewController, actions:Array<(String, (() -> Void))>? = nil) {
+    class func showMessage(title:String, message:String, viewController:UIViewController, style:UIAlertController.Style = .alert , actions:Array<(String, (() -> Void))>? = nil) {
         
-        let alertViewController = UIAlertController.init(title: "", message: "", preferredStyle: .alert)
+        let alertViewController = UIAlertController.init(title: "", message: "", preferredStyle: style)
         
         let attributedTitle = NSAttributedString(string: title, attributes: [ .foregroundColor : UIColor.darkText ])
         let attributedMessage = NSAttributedString(string: "\n" + message, attributes: [ .foregroundColor : UIColor.darkText ])
