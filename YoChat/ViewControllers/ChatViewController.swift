@@ -9,6 +9,7 @@
 import UIKit
 import Bond
 import ReactiveKit
+import AVFoundation
 
 class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -28,11 +29,15 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
         self.imagePickerController.delegate = self
         
         self.actionsheet.addAction(UIAlertAction(title: "Camera", style: .default) { action in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                self.imagePickerController.sourceType = .camera
-                self.present(self.imagePickerController, animated: true, completion: nil)
-            }  else {
-                print("Camera is Not Available")
+            AVCaptureDevice.requestAccess(for: .video) { success in
+                DispatchQueue.main.async {
+                    if UIImagePickerController.isSourceTypeAvailable(.camera), success == true  {
+                        self.imagePickerController.sourceType = .camera
+                        self.present(self.imagePickerController, animated: true, completion: nil)
+                    }  else {
+                        print("Camera is Not Available")
+                    }
+                }
             }
         })
         

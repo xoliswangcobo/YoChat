@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D95B5C6C1713B9B61614C8A0 /* libPods-YoChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D7C0396793F75BDCF24C0A /* libPods-YoChat.a */; };
 		E576980D5578B52B5E3389CF /* libPods-YoChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A702DE2405DB122EE45103 /* libPods-YoChatTests.a */; };
+		F32710C524CE25CD0048B07D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710C324CE25CC0048B07D /* MessageView.swift */; };
+		F32710C624CE25CD0048B07D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710C424CE25CC0048B07D /* LoadingView.swift */; };
 		F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F424CC6C30009ECA9A /* AppDelegate.swift */; };
 		F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F624CC6C30009ECA9A /* SceneDelegate.swift */; };
 		F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F824CC6C30009ECA9A /* ChatsViewController.swift */; };
@@ -53,6 +55,8 @@
 		829E1FA9AF8C5AE5BB4640FE /* Pods-YoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChat.debug.xcconfig"; path = "Target Support Files/Pods-YoChat/Pods-YoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A702DE2405DB122EE45103 /* libPods-YoChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D7C0396793F75BDCF24C0A /* libPods-YoChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F32710C324CE25CC0048B07D /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		F32710C424CE25CC0048B07D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F36899F124CC6C30009ECA9A /* YoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36899F424CC6C30009ECA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36899F624CC6C30009ECA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		F3689A1924CC6D9C009ECA9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F32710C424CE25CC0048B07D /* LoadingView.swift */,
+				F32710C324CE25CC0048B07D /* MessageView.swift */,
 				F3689A2C24CCCC3C009ECA9A /* TableView Cells */,
 				F3689A1B24CC6FE6009ECA9A /* Storyboards */,
 			);
@@ -409,6 +415,7 @@
 				F3689A3C24CCE5C1009ECA9A /* UIApplication+RootView.swift in Sources */,
 				F3689A4124CCEEFB009ECA9A /* AppContainer.swift in Sources */,
 				F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */,
+				F32710C524CE25CD0048B07D /* MessageView.swift in Sources */,
 				F3689A3424CCE404009ECA9A /* ChatsViewModel.swift in Sources */,
 				F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */,
 				F3689A3D24CCE5C1009ECA9A /* Decodable+Any.swift in Sources */,
@@ -424,6 +431,7 @@
 				F3689A2B24CCC6B6009ECA9A /* ChatViewController.swift in Sources */,
 				F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */,
 				F3689A3F24CCE703009ECA9A /* Constants.swift in Sources */,
+				F32710C624CE25CD0048B07D /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
