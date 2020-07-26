@@ -7,24 +7,76 @@
 //
 
 import UIKit
+import Bond
+import ReactiveKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var chatItems: Observable<[ChatItem]>!
+    var chatContact: Observable<ChatContact>!
+    
+    @IBOutlet weak var tableView:UITableView!
+    @IBOutlet weak var textMessage:UITextField!
+    @IBOutlet weak var sendButton:UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.setupBinding()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.reactive.bag.dispose()
     }
-    */
-
+    
+    func setupBinding() {
+        let _ = self.chatContact.observeNext { [unowned self] (contact) in
+            self.navigationItem.title = contact.alias
+        }.dispose(in: self.reactive.bag)
+        
+        let _ = self.sendButton.reactive.tap.observeNext {
+            do {
+                let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : "Text", "isIncoming" : false, "data" : self.textMessage.text ?? "" ])
+                if let chatItem = item {
+                    self.chatItems.value.append(chatItem)
+                }
+            } catch let e {
+                print(e)
+            }
+        }.dispose(in: self.reactive.bag)
+        
+        let _ = self.textMessage.reactive.text.observeNext { [unowned self] (text) in
+            self.sendButton.isEnabled = text?.count ?? 0 > 0
+        }.dispose(in: self.reactive.bag)
+        
+        let _ = self.chatItems.observeNext { [unowned self] (items) in
+            self.tableView.reloadData()
+        }.dispose(in: self.reactive.bag)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.chatItems.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = self.chatItems.value[indexPath.row]
+        
+        if item.type == .Text {
+            let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatMessage", for: indexPath) as! ChatItemTableViewCell
+            chatCell.message.text = item.data
+            item.date = Date()
+            chatCell.date.text = item.date?.dateShort()
+            
+            return chatCell
+        } else {
+            let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatImage", for: indexPath) as! ChatItemImageTableViewCell
+            chatCell.message.text = item.data
+            chatCell.messageImage.image = UIImage(systemName: "pencil.slash")
+            chatCell.date.text = item.date?.dateShort()
+            
+            return chatCell
+        }
+    }
 }

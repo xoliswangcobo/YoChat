@@ -17,6 +17,6 @@ class ChatItem: Codable {
     var id: String
     var type: ChatItemType
     var data: String
-    var date: Date
+    var date: Date?
     var isIncoming: Bool
 }

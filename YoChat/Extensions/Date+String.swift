@@ -17,5 +17,12 @@ extension Date {
         dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: self)
     }
-    
+
+    func dateShort() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, HH:mm"
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: self)
+    }
 }
