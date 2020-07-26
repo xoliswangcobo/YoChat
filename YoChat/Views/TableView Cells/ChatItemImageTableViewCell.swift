@@ -18,4 +18,14 @@ class ChatItemImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.message.text = "Photo"
     }
+    
+    func setIncoming(_ isIncoming:Bool) {
+        if isIncoming == false {
+            self.message.textAlignment = .right
+            self.date.textAlignment = .right
+        } else {
+            self.message.textAlignment = .left
+            self.date.textAlignment = .left
+        }
+    }
 }

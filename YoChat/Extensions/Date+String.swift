@@ -22,7 +22,7 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, HH:mm"
         dateFormatter.timeStyle = .short
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .short
         return dateFormatter.string(from: self)
     }
 }

@@ -25,10 +25,20 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.chatsViewModel.getChats()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addChat(sender:)))
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.rightBarButtonItem = nil
+    }
+    
+    @IBAction func addChat(sender: UIBarButtonItem) {
+        
+    }
+    
     func setupBinding() {
         let _ = self.chatsViewModel.chats.observeNext {  [unowned self] (chats) in
             self.tableView.reloadData()

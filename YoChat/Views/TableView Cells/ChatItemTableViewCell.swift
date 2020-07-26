@@ -12,9 +12,17 @@ class ChatItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var message:UILabel!
     @IBOutlet weak var date:UILabel!
+    @IBOutlet weak var leading:NSLayoutConstraint!
+    @IBOutlet weak var trailing:NSLayoutConstraint!
 
-    func setIncoming(_ selected: Bool, animated: Bool) {
-        
+    func setIncoming(_ isIncoming:Bool) {
+        if isIncoming == false {
+            self.leading.constant = 32
+            self.trailing.constant = 16
+        } else {
+            self.trailing.constant = 32
+            self.leading.constant = 16
+        }
     }
 
 }
