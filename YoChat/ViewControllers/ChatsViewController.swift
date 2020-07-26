@@ -30,6 +30,11 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addChat(sender:)))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
@@ -53,10 +58,10 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let chatCell =  tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         
         let chat = self.chatsViewModel.chats.value[indexPath.row]
-        let firstItem = chat.chatItems.sorted { Int($0.date?.timeIntervalSince1970 ?? 0) > Int($1.date?.timeIntervalSince1970 ?? 0) }.first
-        chatCell.date.text = firstItem?.date?.dateShort() ?? ""
+        let item = chat.chatItems.sorted { Int($0.date?.timeIntervalSince1970 ?? 0) > Int($1.date?.timeIntervalSince1970 ?? 0) }.last
+        chatCell.date.text = item?.date?.dateShort() ?? ""
         chatCell.firstLastName.text = chat.contact.alias
-        chatCell.message.text = firstItem != nil ? (firstItem?.type == ChatItemType.Text ? chat.chatItems.last?.data : "Photo") : "No messages"
+        chatCell.message.text = item != nil ? (item?.type == ChatItemType.Text ? item?.data : "Photo") : "No messages"
         
         return chatCell
     }
