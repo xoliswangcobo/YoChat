@@ -27,12 +27,12 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addChat(sender:)))
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addChat(sender:)))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationItem.rightBarButtonItem = nil
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
     
     @IBAction func addChat(sender: UIBarButtonItem) {
@@ -53,10 +53,10 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let chatCell =  tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         
         let chat = self.chatsViewModel.chats.value[indexPath.row]
-        
-        chatCell.date.text = "\(chat.chatItems.last?.date ?? Date())"
+        let firstItem = chat.chatItems.sorted { Int($0.date?.timeIntervalSince1970 ?? 0) > Int($1.date?.timeIntervalSince1970 ?? 0) }.first
+        chatCell.date.text = firstItem?.date?.dateShort() ?? ""
         chatCell.firstLastName.text = chat.contact.alias
-        chatCell.message.text = "\(chat.chatItems.last?.data ?? "")"
+        chatCell.message.text = firstItem != nil ? (firstItem?.type == ChatItemType.Text ? chat.chatItems.last?.data : "Photo") : "No messages"
         
         return chatCell
     }
@@ -76,7 +76,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.tableView.reloadData()
             }.dispose(in: viewController.reactive.bag)
             
-            Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
+            Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (timer) in
                 do {
                     let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : "Text", "isIncoming" : true, "data" : "Helloo" ])
                 if let chatItem = item {

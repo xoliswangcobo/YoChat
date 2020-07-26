@@ -74,27 +74,27 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-2w-uut">
-                                                            <rect key="frame" x="16" y="16.5" width="58" height="57"/>
+                                                            <rect key="frame" x="16" y="8.5" width="83" height="73"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="4sW-2w-uut" secondAttribute="height" multiplier="1:1" id="dFA-oB-dFw"/>
+                                                                <constraint firstAttribute="width" secondItem="4sW-2w-uut" secondAttribute="height" multiplier="1:1" priority="700" id="dFA-oB-dFw"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN4-0X-mFt">
-                                                            <rect key="frame" x="94" y="16" width="304" height="20"/>
+                                                            <rect key="frame" x="119" y="16" width="279" height="20"/>
                                                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-oE-0Xt">
-                                                            <rect key="frame" x="94" y="46" width="51" height="24"/>
+                                                            <rect key="frame" x="119" y="50" width="51" height="24"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                                             <color key="textColor" name="dark_1"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-4J-ddx">
-                                                            <rect key="frame" x="367.5" y="43.5" width="30.5" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                                            <color key="textColor" name="dark_3"/>
+                                                            <rect key="frame" x="376.5" y="55.5" width="21.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -104,14 +104,15 @@
                                                         <constraint firstItem="l9a-4J-ddx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lfc-oE-0Xt" secondAttribute="trailing" constant="8" id="2fd-3X-ZHz"/>
                                                         <constraint firstAttribute="trailing" secondItem="FN4-0X-mFt" secondAttribute="trailing" constant="16" id="3lo-UY-fFL"/>
                                                         <constraint firstItem="Lfc-oE-0Xt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FN4-0X-mFt" secondAttribute="bottom" constant="4" id="543-nw-dMQ"/>
+                                                        <constraint firstItem="4sW-2w-uut" firstAttribute="width" secondItem="Hi8-WF-JHk" secondAttribute="width" multiplier="0.2" id="LZO-dE-Wpg"/>
                                                         <constraint firstItem="l9a-4J-ddx" firstAttribute="bottom" secondItem="Lfc-oE-0Xt" secondAttribute="bottom" constant="1" id="PKJ-SJ-jyN"/>
-                                                        <constraint firstItem="4sW-2w-uut" firstAttribute="top" secondItem="Hi8-WF-JHk" secondAttribute="top" constant="16" id="RHi-XQ-QfG"/>
+                                                        <constraint firstItem="4sW-2w-uut" firstAttribute="top" secondItem="Hi8-WF-JHk" secondAttribute="top" constant="8" id="RHi-XQ-QfG"/>
                                                         <constraint firstItem="FN4-0X-mFt" firstAttribute="leading" secondItem="4sW-2w-uut" secondAttribute="trailing" constant="20" id="Xsn-22-4OG"/>
                                                         <constraint firstItem="Lfc-oE-0Xt" firstAttribute="leading" secondItem="FN4-0X-mFt" secondAttribute="leading" id="fhB-Td-mI7"/>
-                                                        <constraint firstItem="Lfc-oE-0Xt" firstAttribute="bottom" secondItem="4sW-2w-uut" secondAttribute="bottom" constant="-4" id="gWr-k8-yFH"/>
-                                                        <constraint firstAttribute="bottom" secondItem="4sW-2w-uut" secondAttribute="bottom" constant="16" id="glu-9G-lsr"/>
+                                                        <constraint firstItem="Lfc-oE-0Xt" firstAttribute="bottom" secondItem="4sW-2w-uut" secondAttribute="bottom" constant="-8" id="gWr-k8-yFH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4sW-2w-uut" secondAttribute="bottom" constant="8" id="glu-9G-lsr"/>
                                                         <constraint firstItem="l9a-4J-ddx" firstAttribute="trailing" secondItem="FN4-0X-mFt" secondAttribute="trailing" id="h6C-BZ-4oL"/>
-                                                        <constraint firstItem="FN4-0X-mFt" firstAttribute="top" secondItem="4sW-2w-uut" secondAttribute="top" id="mgO-Ls-UfE"/>
+                                                        <constraint firstItem="FN4-0X-mFt" firstAttribute="top" secondItem="4sW-2w-uut" secondAttribute="top" constant="8" id="mgO-Ls-UfE"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -395,9 +396,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="dark_1">
             <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="dark_3">
-            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="0.18000000715255737" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
