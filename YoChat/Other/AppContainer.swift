@@ -15,6 +15,7 @@ class AppContainer {
     static let shared = AppContainer()
     
     let container = Container()
+    var currentUser:User?
     
     private init() {
         setupDefaultContainers()

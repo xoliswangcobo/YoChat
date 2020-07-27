@@ -10,11 +10,16 @@ import UIKit
 
 class KeyboardManagedViewController: UIViewController {
 
+    @IBOutlet weak var scrollView:UIScrollView?
     @IBOutlet weak var constraintBottom:NSLayoutConstraint?
     var dimissKeyBoardTapGesture:UITapGestureRecognizer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (self.scrollView != nil) {
+            self.scrollView?.showsVerticalScrollIndicator = false
+        }
         
         // Keyboard Notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -30,8 +35,14 @@ class KeyboardManagedViewController: UIViewController {
         let rect = info?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
         let kbSize:CGSize = rect.size
 
-        self.constraintBottom?.constant = kbSize.height
-        self.view.layoutIfNeeded()
+        if let scrollView = self.scrollView {
+            let contentInsets:UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        } else {
+            self.constraintBottom?.constant = kbSize.height
+            self.view.layoutIfNeeded()
+        }
         
         for gestureRecognizer in self.view?.gestureRecognizers ?? [] {
             self.view.removeGestureRecognizer(gestureRecognizer)
@@ -43,8 +54,14 @@ class KeyboardManagedViewController: UIViewController {
     
     @objc func keyboardWillHide(notification:Notification) {
     
-        self.constraintBottom?.constant = 0
-        self.view.layoutIfNeeded()
+        if let scrollView = self.scrollView {
+            let contentInsets:UIEdgeInsets = UIEdgeInsets.zero
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        } else {
+            self.constraintBottom?.constant = 0
+            self.view.layoutIfNeeded()
+        }
         
         for gestureRecognizer in self.view?.gestureRecognizers ?? [] {
             self.view.removeGestureRecognizer(gestureRecognizer)

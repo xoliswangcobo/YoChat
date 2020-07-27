@@ -7,6 +7,7 @@ target 'YoChat' do
   pod 'Bond'
   pod 'Swinject', '2.6.0'
   pod 'SwinjectStoryboard'
+  pod 'MaterialComponents'
 
   target 'YoChatTests' do
     inherit! :search_paths

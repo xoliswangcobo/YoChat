@@ -51,6 +51,153 @@
             </objects>
             <point key="canvasLocation" x="1728" y="76"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fqu-5v-Lex">
+            <objects>
+                <viewController id="Jk7-Ow-ec4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UNs-dZ-4uo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-82-baG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-jb-eLZ" userLabel="ViewContent">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YoChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP3-t3-XjO">
+                                                <rect key="frame" x="144" y="100" width="126" height="48"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-ih-az5" userLabel="Create Account">
+                                                <rect key="frame" x="145.5" y="594" width="123" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                <color key="textColor" name="primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-TI-d8y">
+                                                <rect key="frame" x="24" y="492.5" width="207" height="41.5"/>
+                                                <color key="backgroundColor" name="primary"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7eq-TI-d8y" secondAttribute="height" multiplier="10:2" id="zCy-eX-9Vo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yo email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-T2-4YA" userLabel="email" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="24" y="309" width="366" height="54.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cfS-T2-4YA" secondAttribute="height" multiplier="10:1.5" id="zGW-kd-uRu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="username"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" name="primary"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" name="secondary"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleErrorColor">
+                                                        <color key="value" name="error"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yo password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-6p-2wJ" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="24" y="387.5" width="366" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fkB-6p-2wJ" secondAttribute="height" multiplier="10:1.5" id="knQ-nT-I8w"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="send" secureTextEntry="YES" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" name="primary"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" name="secondary"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleErrorColor">
+                                                        <color key="value" name="error"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot passowrd?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfx-NZ-ETM" userLabel="Forgot Password">
+                                                <rect key="frame" x="233" y="505" width="157" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JP3-t3-XjO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="V7O-jb-eLZ" secondAttribute="top" constant="30" id="1sp-Az-ryn"/>
+                                            <constraint firstItem="Gfx-NZ-ETM" firstAttribute="trailing" secondItem="fkB-6p-2wJ" secondAttribute="trailing" id="2AW-NR-sX4"/>
+                                            <constraint firstItem="fkB-6p-2wJ" firstAttribute="top" secondItem="cfS-T2-4YA" secondAttribute="bottom" constant="24" id="5eh-l0-8Rk"/>
+                                            <constraint firstItem="JP3-t3-XjO" firstAttribute="centerX" secondItem="V7O-jb-eLZ" secondAttribute="centerX" id="9PT-Yj-NrX"/>
+                                            <constraint firstItem="nbd-ih-az5" firstAttribute="top" secondItem="7eq-TI-d8y" secondAttribute="bottom" constant="60" id="D9d-c7-mOG"/>
+                                            <constraint firstItem="7eq-TI-d8y" firstAttribute="leading" secondItem="fkB-6p-2wJ" secondAttribute="leading" id="DYR-TI-OOh"/>
+                                            <constraint firstItem="7eq-TI-d8y" firstAttribute="top" secondItem="fkB-6p-2wJ" secondAttribute="bottom" constant="50" id="FpG-a7-QFE"/>
+                                            <constraint firstAttribute="bottom" secondItem="nbd-ih-az5" secondAttribute="bottom" constant="62" id="XX9-Qi-D79"/>
+                                            <constraint firstItem="cfS-T2-4YA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JP3-t3-XjO" secondAttribute="bottom" constant="30" id="YeR-Iy-aA0"/>
+                                            <constraint firstItem="cfS-T2-4YA" firstAttribute="centerY" secondItem="V7O-jb-eLZ" secondAttribute="centerY" priority="700" id="cnF-46-iCx"/>
+                                            <constraint firstItem="nbd-ih-az5" firstAttribute="centerX" secondItem="V7O-jb-eLZ" secondAttribute="centerX" id="e0b-MH-3J9"/>
+                                            <constraint firstItem="cfS-T2-4YA" firstAttribute="leading" secondItem="V7O-jb-eLZ" secondAttribute="leading" constant="24" id="fC3-1e-JMS"/>
+                                            <constraint firstItem="7eq-TI-d8y" firstAttribute="width" secondItem="V7O-jb-eLZ" secondAttribute="width" multiplier="0.5" id="fkA-yI-sII"/>
+                                            <constraint firstItem="Gfx-NZ-ETM" firstAttribute="centerY" secondItem="7eq-TI-d8y" secondAttribute="centerY" id="knD-yL-Pp1"/>
+                                            <constraint firstItem="fkB-6p-2wJ" firstAttribute="leading" secondItem="cfS-T2-4YA" secondAttribute="leading" id="pAV-UF-4ii"/>
+                                            <constraint firstAttribute="trailing" secondItem="cfS-T2-4YA" secondAttribute="trailing" constant="24" id="sMQ-lc-PpX"/>
+                                            <constraint firstItem="Gfx-NZ-ETM" firstAttribute="leading" secondItem="7eq-TI-d8y" secondAttribute="trailing" constant="2" id="vbk-cE-Dih"/>
+                                            <constraint firstItem="fkB-6p-2wJ" firstAttribute="trailing" secondItem="cfS-T2-4YA" secondAttribute="trailing" id="wTF-al-0tc"/>
+                                            <constraint firstItem="JP3-t3-XjO" firstAttribute="top" secondItem="V7O-jb-eLZ" secondAttribute="top" priority="600" constant="100" id="wYu-cM-YG3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="V7O-jb-eLZ" firstAttribute="top" secondItem="zc3-82-baG" secondAttribute="top" id="1DC-BF-cad"/>
+                                    <constraint firstAttribute="bottom" secondItem="V7O-jb-eLZ" secondAttribute="bottom" constant="212" id="IgV-3d-qjy"/>
+                                    <constraint firstAttribute="trailing" secondItem="V7O-jb-eLZ" secondAttribute="trailing" constant="40" id="VGc-zT-kJ3"/>
+                                    <constraint firstItem="V7O-jb-eLZ" firstAttribute="leading" secondItem="zc3-82-baG" secondAttribute="leading" id="v41-aT-rKT"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Uyg-wu-JHi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="dpY-SN-Qqx"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V7O-jb-eLZ" firstAttribute="width" secondItem="edo-It-TIM" secondAttribute="width" id="0ra-yp-ikK"/>
+                            <constraint firstItem="zc3-82-baG" firstAttribute="top" secondItem="edo-It-TIM" secondAttribute="top" id="2GT-ei-JsG"/>
+                            <constraint firstItem="zc3-82-baG" firstAttribute="leading" secondItem="UNs-dZ-4uo" secondAttribute="leading" id="6MV-wc-nZU"/>
+                            <constraint firstAttribute="trailing" secondItem="zc3-82-baG" secondAttribute="trailing" id="AX6-tb-Wq6"/>
+                            <constraint firstAttribute="bottom" secondItem="zc3-82-baG" secondAttribute="bottom" id="HUb-hV-Jf8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="edo-It-TIM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NF3-by-IaA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="-1353"/>
+        </scene>
         <!--Chats-->
         <scene sceneID="UnJ-bx-GPu">
             <objects>
@@ -396,6 +543,15 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="dark_1">
             <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="error">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
