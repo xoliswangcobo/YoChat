@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jk7-Ow-ec4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -385,7 +385,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-Mb-bgy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMessage" rowHeight="82" id="6dS-9g-Oov" customClass="ChatItemTableViewCell" customModule="YoChat" customModuleProvider="target">
@@ -509,41 +509,49 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g14-5R-nIJ" userLabel="BackView">
+                                <rect key="frame" x="0.0" y="802" width="414" height="94"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYE-Z5-y6o" userLabel="ChatBoxView">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V0-oG-oFK">
-                                        <rect key="frame" x="364" y="9.5" width="34" height="31"/>
+                                        <rect key="frame" x="364" y="14.5" width="34" height="31"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <state key="normal" title="Send"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-fX-QRp">
-                                        <rect key="frame" x="6" y="6" width="342" height="38"/>
+                                        <rect key="frame" x="12" y="12" width="344" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zr9-fX-QRp" firstAttribute="top" secondItem="BYE-Z5-y6o" secondAttribute="top" constant="6" id="0jl-tN-MFX"/>
+                                    <constraint firstItem="zr9-fX-QRp" firstAttribute="top" secondItem="BYE-Z5-y6o" secondAttribute="top" constant="12" id="0jl-tN-MFX"/>
                                     <constraint firstItem="5V0-oG-oFK" firstAttribute="centerY" secondItem="BYE-Z5-y6o" secondAttribute="centerY" id="5Kw-u7-AUe"/>
-                                    <constraint firstItem="zr9-fX-QRp" firstAttribute="leading" secondItem="BYE-Z5-y6o" secondAttribute="leading" constant="6" id="V7l-cs-a6m"/>
+                                    <constraint firstItem="zr9-fX-QRp" firstAttribute="leading" secondItem="BYE-Z5-y6o" secondAttribute="leading" constant="12" id="V7l-cs-a6m"/>
                                     <constraint firstAttribute="bottom" secondItem="zr9-fX-QRp" secondAttribute="bottom" constant="6" id="o4W-nJ-ioy"/>
-                                    <constraint firstAttribute="height" constant="50" id="pnP-6F-YfO"/>
-                                    <constraint firstItem="5V0-oG-oFK" firstAttribute="leading" secondItem="zr9-fX-QRp" secondAttribute="trailing" constant="16" id="r96-Zz-enC"/>
+                                    <constraint firstAttribute="height" constant="60" id="pnP-6F-YfO"/>
+                                    <constraint firstItem="5V0-oG-oFK" firstAttribute="leading" secondItem="zr9-fX-QRp" secondAttribute="trailing" constant="8" id="r96-Zz-enC"/>
                                     <constraint firstAttribute="trailing" secondItem="5V0-oG-oFK" secondAttribute="trailing" constant="16" id="t8C-pF-Tbv"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BYE-Z5-y6o" firstAttribute="leading" secondItem="g14-5R-nIJ" secondAttribute="leading" id="6QP-SO-M3W"/>
                             <constraint firstItem="grb-AK-duQ" firstAttribute="bottom" secondItem="BYE-Z5-y6o" secondAttribute="bottom" id="Dcv-9z-UjR"/>
+                            <constraint firstItem="BYE-Z5-y6o" firstAttribute="trailing" secondItem="g14-5R-nIJ" secondAttribute="trailing" id="Mgj-Ax-0hS"/>
                             <constraint firstItem="BYE-Z5-y6o" firstAttribute="top" secondItem="J6B-Mb-bgy" secondAttribute="bottom" id="My0-Fg-tZQ"/>
                             <constraint firstItem="J6B-Mb-bgy" firstAttribute="top" secondItem="grb-AK-duQ" secondAttribute="top" id="NSb-jZ-IZQ"/>
                             <constraint firstItem="J6B-Mb-bgy" firstAttribute="leading" secondItem="grb-AK-duQ" secondAttribute="leading" id="OML-eV-0iy"/>
                             <constraint firstItem="J6B-Mb-bgy" firstAttribute="trailing" secondItem="grb-AK-duQ" secondAttribute="trailing" id="dkE-F8-alr"/>
                             <constraint firstItem="BYE-Z5-y6o" firstAttribute="leading" secondItem="grb-AK-duQ" secondAttribute="leading" id="n5H-1b-U4j"/>
                             <constraint firstItem="grb-AK-duQ" firstAttribute="trailing" secondItem="BYE-Z5-y6o" secondAttribute="trailing" id="tY4-Cr-3Gy"/>
+                            <constraint firstItem="BYE-Z5-y6o" firstAttribute="top" secondItem="g14-5R-nIJ" secondAttribute="top" id="ycG-UI-g99"/>
+                            <constraint firstItem="g14-5R-nIJ" firstAttribute="bottom" secondItem="dpV-jJ-cUg" secondAttribute="bottom" id="zCR-gV-jb9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="grb-AK-duQ"/>
                     </view>
@@ -598,6 +606,7 @@
         <!--Profile-->
         <scene sceneID="h3b-3B-mQy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDU-Wz-HIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="TCS-Aa-voP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wmV-PH-fSK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -607,7 +616,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="yQb-i9-k5d"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDU-Wz-HIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728" y="765"/>
         </scene>
