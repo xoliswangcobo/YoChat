@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D95B5C6C1713B9B61614C8A0 /* libPods-YoChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D7C0396793F75BDCF24C0A /* libPods-YoChat.a */; };
-		E576980D5578B52B5E3389CF /* libPods-YoChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A702DE2405DB122EE45103 /* libPods-YoChatTests.a */; };
+		136654BFD2EF5C6F738E8B3E /* libPods-YoChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E8F2F6B59FBCF845F00960 /* libPods-YoChatTests.a */; };
 		F32710C524CE25CD0048B07D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710C324CE25CC0048B07D /* MessageView.swift */; };
 		F32710C624CE25CD0048B07D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710C424CE25CC0048B07D /* LoadingView.swift */; };
 		F32710C824CE3B100048B07D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710C724CE3B100048B07D /* User.swift */; };
@@ -43,6 +42,7 @@
 		F3689A4124CCEEFB009ECA9A /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A4024CCEEFB009ECA9A /* AppContainer.swift */; };
 		F3689A4324CDCF29009ECA9A /* TableView+BottomScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A4224CDCF29009ECA9A /* TableView+BottomScroll.swift */; };
 		F3689A4524CDF2B9009ECA9A /* KeyboardManagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689A4424CDF2B9009ECA9A /* KeyboardManagedViewController.swift */; };
+		FD708F58B53F38076DC1D15D /* libPods-YoChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8542032BE371D46DE055C660 /* libPods-YoChat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		305AF59F2A183316F82E69FA /* Pods-YoChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChatTests.debug.xcconfig"; path = "Target Support Files/Pods-YoChatTests/Pods-YoChatTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7DEF9BF36387FA957E42B722 /* Pods-YoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChat.release.xcconfig"; path = "Target Support Files/Pods-YoChat/Pods-YoChat.release.xcconfig"; sourceTree = "<group>"; };
-		829E1FA9AF8C5AE5BB4640FE /* Pods-YoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChat.debug.xcconfig"; path = "Target Support Files/Pods-YoChat/Pods-YoChat.debug.xcconfig"; sourceTree = "<group>"; };
-		A5A702DE2405DB122EE45103 /* libPods-YoChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8D7C0396793F75BDCF24C0A /* libPods-YoChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8D8E0250721C5513C62A3E /* Pods-YoChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChatTests.debug.xcconfig"; path = "Target Support Files/Pods-YoChatTests/Pods-YoChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46A24E3E16E6E9B573E9B6A1 /* Pods-YoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChat.debug.xcconfig"; path = "Target Support Files/Pods-YoChat/Pods-YoChat.debug.xcconfig"; sourceTree = "<group>"; };
+		83E8F2F6B59FBCF845F00960 /* libPods-YoChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8542032BE371D46DE055C660 /* libPods-YoChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F873EC769F508D67B5ABB7 /* Pods-YoChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChatTests.release.xcconfig"; path = "Target Support Files/Pods-YoChatTests/Pods-YoChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE9631F733A9FAD7ECE9C44C /* Pods-YoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChat.release.xcconfig"; path = "Target Support Files/Pods-YoChat/Pods-YoChat.release.xcconfig"; sourceTree = "<group>"; };
 		F32710C324CE25CC0048B07D /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		F32710C424CE25CC0048B07D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F32710C724CE3B100048B07D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		F3689A4024CCEEFB009ECA9A /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		F3689A4224CDCF29009ECA9A /* TableView+BottomScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+BottomScroll.swift"; sourceTree = "<group>"; };
 		F3689A4424CDF2B9009ECA9A /* KeyboardManagedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManagedViewController.swift; sourceTree = "<group>"; };
-		F84427995ACE874D9D6229AD /* Pods-YoChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoChatTests.release.xcconfig"; path = "Target Support Files/Pods-YoChatTests/Pods-YoChatTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95B5C6C1713B9B61614C8A0 /* libPods-YoChat.a in Frameworks */,
+				FD708F58B53F38076DC1D15D /* libPods-YoChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E576980D5578B52B5E3389CF /* libPods-YoChatTests.a in Frameworks */,
+				136654BFD2EF5C6F738E8B3E /* libPods-YoChatTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,19 +125,19 @@
 		2437B04E7DEDB10D1AC45B11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				829E1FA9AF8C5AE5BB4640FE /* Pods-YoChat.debug.xcconfig */,
-				7DEF9BF36387FA957E42B722 /* Pods-YoChat.release.xcconfig */,
-				305AF59F2A183316F82E69FA /* Pods-YoChatTests.debug.xcconfig */,
-				F84427995ACE874D9D6229AD /* Pods-YoChatTests.release.xcconfig */,
+				46A24E3E16E6E9B573E9B6A1 /* Pods-YoChat.debug.xcconfig */,
+				CE9631F733A9FAD7ECE9C44C /* Pods-YoChat.release.xcconfig */,
+				1C8D8E0250721C5513C62A3E /* Pods-YoChatTests.debug.xcconfig */,
+				86F873EC769F508D67B5ABB7 /* Pods-YoChatTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D47BC78230CA9E5AE3562228 /* Frameworks */ = {
+		85C6176ABDAE484DAE14F2A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8D7C0396793F75BDCF24C0A /* libPods-YoChat.a */,
-				A5A702DE2405DB122EE45103 /* libPods-YoChatTests.a */,
+				8542032BE371D46DE055C660 /* libPods-YoChat.a */,
+				83E8F2F6B59FBCF845F00960 /* libPods-YoChatTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				F3689A0A24CC6C35009ECA9A /* YoChatTests */,
 				F36899F224CC6C30009ECA9A /* Products */,
 				2437B04E7DEDB10D1AC45B11 /* Pods */,
-				D47BC78230CA9E5AE3562228 /* Frameworks */,
+				85C6176ABDAE484DAE14F2A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,7 +283,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3689A1024CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChat" */;
 			buildPhases = (
-				5DB8BBA6331F7DA943451BFB /* [CP] Check Pods Manifest.lock */,
+				BD854B5CD4E323AFA4FDE431 /* [CP] Check Pods Manifest.lock */,
 				F36899ED24CC6C30009ECA9A /* Sources */,
 				F36899EE24CC6C30009ECA9A /* Frameworks */,
 				F36899EF24CC6C30009ECA9A /* Resources */,
@@ -301,7 +301,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3689A1324CC6C35009ECA9A /* Build configuration list for PBXNativeTarget "YoChatTests" */;
 			buildPhases = (
-				13B81C4DB3C3D57120D5B7CF /* [CP] Check Pods Manifest.lock */,
+				93804E52939F8A783BF25EB1 /* [CP] Check Pods Manifest.lock */,
 				F3689A0324CC6C35009ECA9A /* Sources */,
 				F3689A0424CC6C35009ECA9A /* Frameworks */,
 				F3689A0524CC6C35009ECA9A /* Resources */,
@@ -376,7 +376,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13B81C4DB3C3D57120D5B7CF /* [CP] Check Pods Manifest.lock */ = {
+		93804E52939F8A783BF25EB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,7 +398,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5DB8BBA6331F7DA943451BFB /* [CP] Check Pods Manifest.lock */ = {
+		BD854B5CD4E323AFA4FDE431 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,7 +613,7 @@
 		};
 		F3689A1124CC6C35009ECA9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 829E1FA9AF8C5AE5BB4640FE /* Pods-YoChat.debug.xcconfig */;
+			baseConfigurationReference = 46A24E3E16E6E9B573E9B6A1 /* Pods-YoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -633,7 +633,7 @@
 		};
 		F3689A1224CC6C35009ECA9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DEF9BF36387FA957E42B722 /* Pods-YoChat.release.xcconfig */;
+			baseConfigurationReference = CE9631F733A9FAD7ECE9C44C /* Pods-YoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -653,7 +653,7 @@
 		};
 		F3689A1424CC6C35009ECA9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 305AF59F2A183316F82E69FA /* Pods-YoChatTests.debug.xcconfig */;
+			baseConfigurationReference = 1C8D8E0250721C5513C62A3E /* Pods-YoChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -676,7 +676,7 @@
 		};
 		F3689A1524CC6C35009ECA9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F84427995ACE874D9D6229AD /* Pods-YoChatTests.release.xcconfig */;
+			baseConfigurationReference = 86F873EC769F508D67B5ABB7 /* Pods-YoChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
