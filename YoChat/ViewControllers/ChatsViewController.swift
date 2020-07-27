@@ -41,7 +41,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func addChat(sender: UIBarButtonItem) {
-        
+        self.performSegue(withIdentifier: "toAddChat", sender: sender)
     }
     
     func setupBinding() {
@@ -51,13 +51,13 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.chatsViewModel.chats.value.count
+        return self.chatsViewModel.chats.collection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatCell =  tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         
-        let chat = self.chatsViewModel.chats.value[indexPath.row]
+        let chat = self.chatsViewModel.chats.collection[indexPath.row]
         let item = chat.chatItems.sorted { Int($0.date?.timeIntervalSince1970 ?? 0) > Int($1.date?.timeIntervalSince1970 ?? 0) }.last
         chatCell.date.text = item?.date?.dateShort() ?? ""
         chatCell.firstLastName.text = chat.contact.alias
@@ -68,7 +68,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "toChatViewController", sender: self.chatsViewModel?.chats.value[indexPath.row])
+        self.performSegue(withIdentifier: "toChatViewController", sender: self.chatsViewModel?.chats.collection[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,6 +88,25 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     viewController.chatItems.value.append(chatItem)
                 }
                 } catch {
+                    
+                }
+            }
+        } else if segue.identifier == "toAddChat" {
+            let navigationController = segue.destination as! UINavigationController
+            let viewController = navigationController.topViewController as! AddChatViewController
+            viewController.completionHandler = { contact in
+                if let contact = contact {
+                    let _ = self.chatsViewModel.chats.observeNext { chats in
+                        if (chats.collection.first(where: { $0.contact.email == contact.email }) != nil) {
+                            viewController.dismiss(animated: true)
+                        } else {
+                            MessageView.showMessage(title: "Add Chat", message: "Can not add the contact.", viewController: viewController, actions: [("Okay", {
+                                
+                            })])
+                        }
+                    }.dispose(in: viewController.reactive.bag)
+                    self.chatsViewModel.addChat(contact: contact)
+                } else {
                     
                 }
             }

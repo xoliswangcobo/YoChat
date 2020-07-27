@@ -11,19 +11,29 @@ import Bond
 
 class ChatsViewModel {
     
-    var chats = Observable<[Chat]>([])
+    var chats = MutableObservableArray<Chat>([])
  
     func getChats() {
-        var someChats:[Chat] = []
-        
+//        var someChats:[Chat] = []
+//
+//        do {
+//            if let chat:Chat = try Chat.decode(["id" : "101_\(1)", "chatItems" : [], "contact" : [ "firstname" : "Xoliswa", "lastname" : "Ngcobo", "email" : "xoliswa@ngcobo.com", "alias" : "eXo"]]) {
+//                someChats.append(chat)
+//            }
+//        } catch (let e) {
+//            print(e)
+//        }
+//
+//        self.chats.send(someChats)
+    }
+    
+    func addChat(contact:ChatContact) {
         do {
-            if let chat:Chat = try Chat.decode(["id" : "101_\(1)", "chatItems" : [], "contact" : [ "firstname" : "Xoliswa", "lastname" : "Ngcobo", "email" : "xoliswa@ngcobo.com", "alias" : "eXo"]]) {
-                someChats.append(chat)
+            if let chat:Chat = try Chat.decode(["id" : "101_\(1)", "chatItems" : [], "contact" : ChatContact.encode(decoded: contact)]) {
+                self.chats.append(chat)
             }
         } catch (let e) {
             print(e)
         }
-        
-        self.chats.send(someChats)
     }
 }

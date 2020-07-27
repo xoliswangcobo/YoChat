@@ -25,7 +25,6 @@ class EnrolmentViewController: KeyboardManagedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupBinding()
-        self.firstname.sizeToFit()
     }
     
     func setupBinding() {

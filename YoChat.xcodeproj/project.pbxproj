@@ -18,6 +18,7 @@
 		F32710D224CF02130048B07D /* Data+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D124CF02130048B07D /* Data+AES.swift */; };
 		F32710D424CF29100048B07D /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D324CF29100048B07D /* String+Validation.swift */; };
 		F32710D624CF38170048B07D /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D524CF38170048B07D /* TextButton.swift */; };
+		F3307A1D24CF4B8500F0D1D1 /* AddChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3307A1C24CF4B8500F0D1D1 /* AddChatViewController.swift */; };
 		F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F424CC6C30009ECA9A /* AppDelegate.swift */; };
 		F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F624CC6C30009ECA9A /* SceneDelegate.swift */; };
 		F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F824CC6C30009ECA9A /* ChatsViewController.swift */; };
@@ -74,6 +75,7 @@
 		F32710D124CF02130048B07D /* Data+AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+AES.swift"; sourceTree = "<group>"; };
 		F32710D324CF29100048B07D /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		F32710D524CF38170048B07D /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		F3307A1C24CF4B8500F0D1D1 /* AddChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChatViewController.swift; sourceTree = "<group>"; };
 		F36899F124CC6C30009ECA9A /* YoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36899F424CC6C30009ECA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36899F624CC6C30009ECA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				F3689A4424CDF2B9009ECA9A /* KeyboardManagedViewController.swift */,
 				F32710CB24CEF3750048B07D /* EnrolmentViewController.swift */,
+				F3307A1C24CF4B8500F0D1D1 /* AddChatViewController.swift */,
 				F36899F824CC6C30009ECA9A /* ChatsViewController.swift */,
 				F3689A2A24CCC6B6009ECA9A /* ChatViewController.swift */,
 				F3689A2624CCC2E7009ECA9A /* LaunchViewController.swift */,
@@ -463,6 +466,7 @@
 				F32710CF24CF000C0048B07D /* BiometricAuth.swift in Sources */,
 				F32710D224CF02130048B07D /* Data+AES.swift in Sources */,
 				F3689A3F24CCE703009ECA9A /* Constants.swift in Sources */,
+				F3307A1D24CF4B8500F0D1D1 /* AddChatViewController.swift in Sources */,
 				F32710C624CE25CD0048B07D /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
