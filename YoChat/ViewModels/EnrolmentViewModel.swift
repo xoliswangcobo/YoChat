@@ -31,10 +31,25 @@ class EnrolmentViewModel {
     let lastname: Observable<String?> = Observable<String?>("")
     let alias: Observable<String?> = Observable<String?>("")
     let email: Observable<String?> = Observable<String?>("")
-    let serverIP: Observable<String?> = Observable<String?>("")
+    let serverIPURL: Observable<String?> = Observable<String?>("")
     
     func enrolUser() {
+        self.loadingOperationState.send(.Enrol(message: "Enrolling..."))
         
+        let details:[String:Any] = [
+            "email" : self.email.value?.trimmingCharacters(in: .whitespacesAndNewlines) as Any,
+            "firstname" : self.firstname.value?.trimmingCharacters(in: .whitespacesAndNewlines) as Any,
+            "lastname" : self.lastname.value?.trimmingCharacters(in: .whitespacesAndNewlines) as Any,
+            "alias" : self.alias.value?.trimmingCharacters(in: .whitespacesAndNewlines) as Any
+        ]
+        
+        do {
+            let user:User? = try User.decode(details)
+            AppContainer.shared.currentUser = user
+            self.messageEnrolmentStatus.send(.Success("Successfully enrolled", .Enrol(message: "")))
+        } catch let error {
+            self.messageEnrolmentStatus.send(.Failed(error, .Enrol(message: "")))
+        }
     }
     
     func unEnrol() {
@@ -43,5 +58,13 @@ class EnrolmentViewModel {
     
     func update() {
         
+    }
+    
+    func validate() -> Bool {
+        guard let email = self.email.value?.trimmingCharacters(in: .whitespacesAndNewlines), let firstname = self.firstname.value?.trimmingCharacters(in: .whitespacesAndNewlines), let lastname = self.lastname.value?.trimmingCharacters(in: .whitespacesAndNewlines), let alias = self.alias.value?.trimmingCharacters(in: .whitespacesAndNewlines), let serverIPURL = self.serverIPURL.value?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            return false
+        }
+
+        return (email.isValidEmail() && (firstname.isEmpty == false) && (lastname.isEmpty == false) && (alias.isEmpty == false) && (serverIPURL.isEmpty == false))
     }
 }

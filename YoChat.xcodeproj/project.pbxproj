@@ -16,6 +16,8 @@
 		F32710CF24CF000C0048B07D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710CD24CF000C0048B07D /* BiometricAuth.swift */; };
 		F32710D024CF000C0048B07D /* KeyChainSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710CE24CF000C0048B07D /* KeyChainSecurity.swift */; };
 		F32710D224CF02130048B07D /* Data+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D124CF02130048B07D /* Data+AES.swift */; };
+		F32710D424CF29100048B07D /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D324CF29100048B07D /* String+Validation.swift */; };
+		F32710D624CF38170048B07D /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D524CF38170048B07D /* TextButton.swift */; };
 		F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F424CC6C30009ECA9A /* AppDelegate.swift */; };
 		F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F624CC6C30009ECA9A /* SceneDelegate.swift */; };
 		F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F824CC6C30009ECA9A /* ChatsViewController.swift */; };
@@ -70,6 +72,8 @@
 		F32710CD24CF000C0048B07D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		F32710CE24CF000C0048B07D /* KeyChainSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainSecurity.swift; sourceTree = "<group>"; };
 		F32710D124CF02130048B07D /* Data+AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+AES.swift"; sourceTree = "<group>"; };
+		F32710D324CF29100048B07D /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		F32710D524CF38170048B07D /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		F36899F124CC6C30009ECA9A /* YoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36899F424CC6C30009ECA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36899F624CC6C30009ECA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				F32710C324CE25CC0048B07D /* MessageView.swift */,
 				F3689A2C24CCCC3C009ECA9A /* TableView Cells */,
 				F3689A1B24CC6FE6009ECA9A /* Storyboards */,
+				F32710D524CF38170048B07D /* TextButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				F3689A3724CCE5C1009ECA9A /* Encodable+Any.swift */,
 				F3689A3824CCE5C1009ECA9A /* UIApplication+RootView.swift */,
 				F3689A4224CDCF29009ECA9A /* TableView+BottomScroll.swift */,
+				F32710D324CF29100048B07D /* String+Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				F3689A4124CCEEFB009ECA9A /* AppContainer.swift in Sources */,
 				F3689A1D24CC70AE009ECA9A /* ChatItem.swift in Sources */,
 				F32710C524CE25CD0048B07D /* MessageView.swift in Sources */,
+				F32710D624CF38170048B07D /* TextButton.swift in Sources */,
 				F3689A3424CCE404009ECA9A /* ChatsViewModel.swift in Sources */,
 				F32710CC24CEF3750048B07D /* EnrolmentViewController.swift in Sources */,
 				F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */,
@@ -448,6 +455,7 @@
 				F3689A4324CDCF29009ECA9A /* TableView+BottomScroll.swift in Sources */,
 				F3689A3B24CCE5C1009ECA9A /* Encodable+Any.swift in Sources */,
 				F3689A2724CCC2E7009ECA9A /* LaunchViewController.swift in Sources */,
+				F32710D424CF29100048B07D /* String+Validation.swift in Sources */,
 				F3689A2E24CCCC5F009ECA9A /* ChatTableViewCell.swift in Sources */,
 				F3689A2B24CCC6B6009ECA9A /* ChatViewController.swift in Sources */,
 				F32710C824CE3B100048B07D /* User.swift in Sources */,

@@ -25,6 +25,10 @@ class AppContainer {
         container.register(ChatsViewModel.self) { resolver in
             return ChatsViewModel.init()
         }
+        
+        container.register(EnrolmentViewModel.self) { resolver in
+            return EnrolmentViewModel.init()
+        }
     }
 }
 
@@ -32,6 +36,10 @@ extension SwinjectStoryboard {
     @objc class func setup() {
         defaultContainer.storyboardInitCompleted(ChatsViewController.self) { _, controller in
             controller.chatsViewModel = AppContainer.shared.container.resolve(ChatsViewModel.self)
+        }
+        
+        defaultContainer.storyboardInitCompleted(EnrolmentViewController.self) { _, controller in
+            controller.enrolmentViewModel = AppContainer.shared.container.resolve(EnrolmentViewModel.self)
         }
     
     }
