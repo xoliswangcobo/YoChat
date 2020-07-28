@@ -14,8 +14,8 @@ class LaunchViewController: UIViewController {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            let navigationController = self.storyboard?.instantiateViewController(identifier: "MainNavigationController") as! UINavigationController
-            UIApplication.setRootView(navigationController, options: .transitionCrossDissolve)
+            let controller = self.storyboard?.instantiateViewController(identifier: "EnrolmentViewController") as! EnrolmentViewController
+            UIApplication.setRootView(controller, options: .transitionCrossDissolve)
         }
     }
 }

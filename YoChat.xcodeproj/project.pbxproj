@@ -19,6 +19,7 @@
 		F32710D424CF29100048B07D /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D324CF29100048B07D /* String+Validation.swift */; };
 		F32710D624CF38170048B07D /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32710D524CF38170048B07D /* TextButton.swift */; };
 		F3307A1D24CF4B8500F0D1D1 /* AddChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3307A1C24CF4B8500F0D1D1 /* AddChatViewController.swift */; };
+		F3307A1F24D029F300F0D1D1 /* CoreChatMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3307A1E24D029F300F0D1D1 /* CoreChatMessaging.swift */; };
 		F36899F524CC6C30009ECA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F424CC6C30009ECA9A /* AppDelegate.swift */; };
 		F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F624CC6C30009ECA9A /* SceneDelegate.swift */; };
 		F36899F924CC6C30009ECA9A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36899F824CC6C30009ECA9A /* ChatsViewController.swift */; };
@@ -76,6 +77,7 @@
 		F32710D324CF29100048B07D /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		F32710D524CF38170048B07D /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		F3307A1C24CF4B8500F0D1D1 /* AddChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChatViewController.swift; sourceTree = "<group>"; };
+		F3307A1E24D029F300F0D1D1 /* CoreChatMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreChatMessaging.swift; sourceTree = "<group>"; };
 		F36899F124CC6C30009ECA9A /* YoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36899F424CC6C30009ECA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36899F624CC6C30009ECA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				F3689A2224CC898A009ECA9A /* ChatContact.swift */,
 				F3689A3E24CCE703009ECA9A /* Constants.swift */,
 				F32710C724CE3B100048B07D /* User.swift */,
+				F3307A1E24D029F300F0D1D1 /* CoreChatMessaging.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				F3689A2B24CCC6B6009ECA9A /* ChatViewController.swift in Sources */,
 				F32710C824CE3B100048B07D /* User.swift in Sources */,
 				F36899F724CC6C30009ECA9A /* SceneDelegate.swift in Sources */,
+				F3307A1F24D029F300F0D1D1 /* CoreChatMessaging.swift in Sources */,
 				F32710CF24CF000C0048B07D /* BiometricAuth.swift in Sources */,
 				F32710D224CF02130048B07D /* Data+AES.swift in Sources */,
 				F3689A3F24CCE703009ECA9A /* Constants.swift in Sources */,

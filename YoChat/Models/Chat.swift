@@ -9,7 +9,7 @@
 import Foundation
 
 class Chat: Codable {
-    var id: String
+    var id: String?
     var chatItems: [ChatItem]
     var contact: ChatContact
 }

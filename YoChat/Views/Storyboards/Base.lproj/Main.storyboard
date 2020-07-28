@@ -218,7 +218,7 @@
         <!--Enrolment View Controller-->
         <scene sceneID="fqu-5v-Lex">
             <objects>
-                <viewController id="Jk7-Ow-ec4" customClass="EnrolmentViewController" customModule="YoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnrolmentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jk7-Ow-ec4" customClass="EnrolmentViewController" customModule="YoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UNs-dZ-4uo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

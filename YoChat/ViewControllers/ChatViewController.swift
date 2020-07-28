@@ -15,6 +15,7 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
 
     var chatItems: Observable<[ChatItem]>!
     var chatContact: Observable<ChatContact>!
+    var sendHandler:((ChatItem) -> Void)?
     
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var textMessage:UITextField!
@@ -118,9 +119,10 @@ class ChatViewController: KeyboardManagedViewController, UITableViewDelegate, UI
     
     func sendData(type:ChatItemType, data:String?) {
         do {
-            let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : type.rawValue, "isIncoming" : false, "data" : data ?? "" ])
+            let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : type.rawValue, "isIncoming" : false, "data" : data ?? "", "to" : self.chatContact.value.email ])
             if let chatItem = item {
                 self.chatItems.value.append(chatItem)
+                self.sendHandler?(chatItem)
             }
         } catch let e {
             print(e)

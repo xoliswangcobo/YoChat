@@ -16,6 +16,7 @@ class AppContainer {
     
     let container = Container()
     var currentUser:User?
+    var messagingURL:String?
     
     private init() {
         setupDefaultContainers()
@@ -23,7 +24,7 @@ class AppContainer {
     
     private func setupDefaultContainers() {
         container.register(ChatsViewModel.self) { resolver in
-            return ChatsViewModel.init()
+            return ChatsViewModel.init(coreChatMessaging: CoreChatMessaging.start(url: AppContainer.shared.messagingURL ?? ""), user: AppContainer.shared.currentUser!)
         }
         
         container.register(EnrolmentViewModel.self) { resolver in

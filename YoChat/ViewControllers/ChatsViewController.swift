@@ -81,15 +81,12 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.tableView.reloadData()
             }.dispose(in: viewController.reactive.bag)
             
-            Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (timer) in
-                do {
-                    let item:ChatItem? = try ChatItem.decode([ "id" : "msg_\(Date().description)", "type" : "Text", "isIncoming" : true, "data" : "Helloo" ])
-                if let chatItem = item {
-                    viewController.chatItems.value.append(chatItem)
-                }
-                } catch {
-                    
-                }
+            self.chatsViewModel.chats.observeNext { items in
+                viewController.chatItems.send(chat.chatItems)
+            }.dispose(in: viewController.bag)
+            
+            viewController.sendHandler = { item in
+                self.chatsViewModel.sendChat(item: item)
             }
         } else if segue.identifier == "toAddChat" {
             let navigationController = segue.destination as! UINavigationController

@@ -9,6 +9,7 @@ target 'YoChat' do
   pod 'Swinject', '2.6.0'
   pod 'SwinjectStoryboard'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 
   target 'YoChatTests' do
     inherit! :search_paths

@@ -25,4 +25,12 @@ extension Date {
         dateFormatter.dateStyle = .short
         return dateFormatter.string(from: self)
     }
+    
+    static func dateFrom(date:String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Constants.dateFormat
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.date(from: date)
+    }
 }

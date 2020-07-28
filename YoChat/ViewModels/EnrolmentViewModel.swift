@@ -27,13 +27,14 @@ class EnrolmentViewModel {
     var loadingOperationState = Observable<OperationState>(.None)
     var messageEnrolmentStatus = Observable<EnrolmentStatus>(.Ignored)
     
-    let firstname: Observable<String?> = Observable<String?>("")
-    let lastname: Observable<String?> = Observable<String?>("")
-    let alias: Observable<String?> = Observable<String?>("")
-    let email: Observable<String?> = Observable<String?>("")
-    let serverIPURL: Observable<String?> = Observable<String?>("")
+    let firstname: Observable<String?> = Observable<String?>("Xoliswa")
+    let lastname: Observable<String?> = Observable<String?>("Ngcobo")
+    let alias: Observable<String?> = Observable<String?>("XN")
+    let email: Observable<String?> = Observable<String?>("ngcobox@gmail.com")
+    let serverIPURL: Observable<String?> = Observable<String?>("http://localhost:5555")
     
     func enrolUser() {
+        AppContainer.shared.messagingURL = self.serverIPURL.value?.trimmingCharacters(in: .whitespacesAndNewlines)
         self.loadingOperationState.send(.Enrol(message: "Enrolling..."))
         
         let details:[String:Any] = [
