@@ -27,10 +27,10 @@ class EnrolmentViewModel {
     var loadingOperationState = Observable<OperationState>(.None)
     var messageEnrolmentStatus = Observable<EnrolmentStatus>(.Ignored)
     
-    let firstname: Observable<String?> = Observable<String?>("Xoliswa")
-    let lastname: Observable<String?> = Observable<String?>("Ngcobo")
-    let alias: Observable<String?> = Observable<String?>("XN")
-    let email: Observable<String?> = Observable<String?>("ngcobox@gmail.com")
+    let firstname: Observable<String?> = Observable<String?>("")
+    let lastname: Observable<String?> = Observable<String?>("")
+    let alias: Observable<String?> = Observable<String?>("")
+    let email: Observable<String?> = Observable<String?>("")
     let serverIPURL: Observable<String?> = Observable<String?>("http://localhost:5555")
     
     func enrolUser() {

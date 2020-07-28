@@ -24,13 +24,13 @@ class ChatsViewModel {
             
             do {
                 if let item:ChatItem = try ChatItem.decode(data) {
-                    if let chat = self.chats.collection.first(where: { $0.contact.email == item.to }) {
+                    if let chat = self.chats.collection.first(where: { $0.contact.email.lowercased() == item.from?.lowercased() }) {
                         item.isIncoming = true
                         chat.chatItems.append(item)
                         self.chats.send(self.chats.value)
-                    } else if item.to == self.user.email {
+                    } else if item.to == self.user.email, item.from != self.user.email {
                          item.isIncoming = true
-                        let chat:Chat? = try Chat.decode([ "chatItems" : [], "contact" : [ "firstname" : "New Contact", "lastname" : "New Contact", "email" : item.from, "alias" : "New Contact"]])
+                        let chat:Chat? = try Chat.decode([ "chatItems" : [], "contact" : [ "firstname" : "New Contact", "lastname" : "New Contact", "email" : item.from?.lowercased(), "alias" : "New Contact"]])
                         chat?.chatItems.append(item)
                         
                         if let chat = chat {

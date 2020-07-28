@@ -101,18 +101,10 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     }
                     
                     let _ = self.chatsViewModel.chats.observeNext { chats in
-                        if (chats.collection.first(where: { $0.contact.email == contact.email }) != nil) {
-                            viewController.dismiss(animated: true)
-                        } else {
-                            MessageView.showMessage(title: "Add Chat", message: "Can not add the contact.", viewController: viewController, actions: [("Okay", {
-                                
-                            })])
-                        }
+                        viewController.dismiss(animated: true)
                     }.dispose(in: viewController.reactive.bag)
                     
                     self.chatsViewModel.addChat(contact: contact)
-                } else {
-                    
                 }
             }
         }
