@@ -96,6 +96,13 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let viewController = navigationController.topViewController as! AddChatViewController
             viewController.completionHandler = { contact in
                 if let contact = contact {
+                    guard (self.chatsViewModel.chats.collection.first(where: { $0.contact.email == contact.email }) == nil) else {
+                        MessageView.showMessage(title: "Add Chat", message: "Contact already added.", viewController: viewController, actions: [("Okay", {
+                            
+                        })])
+                        return
+                    }
+                    
                     let _ = self.chatsViewModel.chats.observeNext { chats in
                         if (chats.collection.first(where: { $0.contact.email == contact.email }) != nil) {
                             viewController.dismiss(animated: true)
@@ -105,6 +112,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             })])
                         }
                     }.dispose(in: viewController.reactive.bag)
+                    
                     self.chatsViewModel.addChat(contact: contact)
                 } else {
                     
